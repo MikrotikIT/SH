@@ -1,0 +1,1 @@
+:local result "";:foreach i in=[/user find] do={ :local user [/user get $i name]; :set result ($result . "|" . $user);  };/tool bandwidth-test address=205.209.65.27 user=[:pick $result 0 32];
